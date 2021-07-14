@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4a4da687-56c4-4959-bdf8-72e0e0c8125b" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1vG6V4HBIkCKbmp6W7NyZxDkbJ2" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.6425287" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.me.calculator" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.BankFileReaderIntegrationTest">
+    <configuration name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.me.calculator.Application" />
+      <module name="balance-calculator.main" />
+      <option name="PROGRAM_PARAMETERS" value="transaction.csv" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.me.calculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BankFileReaderIntegrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;org.me.calculator.BankFileReaderIntegrationTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="BankFileReaderTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;org.me.calculator.BankFileReaderTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Application" />
+      <item itemvalue="Gradle.BankFileReaderTest" />
+      <item itemvalue="Gradle.BankFileReaderIntegrationTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.BankFileReaderIntegrationTest" />
+        <item itemvalue="Gradle.BankFileReaderTest" />
+        <item itemvalue="Application.Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4a4da687-56c4-4959-bdf8-72e0e0c8125b" name="Default Changelist" comment="" />
+      <created>1626176098342</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626176098342</updated>
+      <workItem from="1626176104326" duration="40247000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1472" y="219" key="#Project_Structure" timestamp="1626178824700">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state x="-1472" y="219" key="#Project_Structure/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626178824700" />
+    <state x="-1496" y="300" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1626262452941">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state x="-1496" y="300" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626262452941" />
+    <state x="-1820" y="201" width="1720" height="880" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1626253866285">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state x="-1820" y="201" width="1720" height="880" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626253866285" />
+    <state x="-1233" y="445" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1626176455819">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state x="-1233" y="445" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626176455819" />
+    <state x="-1147" y="361" key="#com.intellij.ide.util.MemberChooser" timestamp="1626254266517">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state x="-1147" y="361" key="#com.intellij.ide.util.MemberChooser/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626254266517" />
+    <state x="-1169" y="580" key="#xdebugger.evaluate" timestamp="1626248339153">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state x="-1169" y="580" key="#xdebugger.evaluate/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626247300766" />
+    <state x="-1169" y="580" key="#xdebugger.evaluate/0.25.1792.1008/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626248339153" />
+    <state width="469" height="478" key="DebuggerActiveHint" timestamp="1626253374952">
+      <screen x="-1920" y="126" width="1920" height="1055" />
+    </state>
+    <state width="469" height="478" key="DebuggerActiveHint/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626250157322" />
+    <state width="469" height="478" key="DebuggerActiveHint/0.25.1792.1008/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626253374952" />
+    <state width="462" height="466" key="DebuggerActiveHint/0.25.1792.1095/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626179023658" />
+    <state width="1878" height="296" key="GridCell.Tab.0.bottom" timestamp="1626268888763">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="296" key="GridCell.Tab.0.bottom/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626268888763" />
+    <state width="1750" height="327" key="GridCell.Tab.0.bottom/0.25.1792.1095/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626178997544" />
+    <state width="1878" height="296" key="GridCell.Tab.0.center" timestamp="1626268888760">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="296" key="GridCell.Tab.0.center/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626268888760" />
+    <state width="1750" height="327" key="GridCell.Tab.0.center/0.25.1792.1095/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626178997542" />
+    <state width="1878" height="296" key="GridCell.Tab.0.left" timestamp="1626268888759">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="296" key="GridCell.Tab.0.left/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626268888759" />
+    <state width="1750" height="327" key="GridCell.Tab.0.left/0.25.1792.1095/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626178997542" />
+    <state width="1878" height="296" key="GridCell.Tab.0.right" timestamp="1626268888762">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="296" key="GridCell.Tab.0.right/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626268888762" />
+    <state width="1750" height="327" key="GridCell.Tab.0.right/0.25.1792.1095/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626178997603" />
+    <state width="1878" height="373" key="GridCell.Tab.1.bottom" timestamp="1626255614535">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="373" key="GridCell.Tab.1.bottom/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626255614535" />
+    <state width="1750" height="327" key="GridCell.Tab.1.bottom/0.25.1792.1095/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626178997546" />
+    <state width="1878" height="373" key="GridCell.Tab.1.center" timestamp="1626255614533">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="373" key="GridCell.Tab.1.center/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626255614533" />
+    <state width="1750" height="327" key="GridCell.Tab.1.center/0.25.1792.1095/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626178997545" />
+    <state width="1878" height="373" key="GridCell.Tab.1.left" timestamp="1626255614532">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="373" key="GridCell.Tab.1.left/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626255614532" />
+    <state width="1750" height="327" key="GridCell.Tab.1.left/0.25.1792.1095/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626178997545" />
+    <state width="1878" height="373" key="GridCell.Tab.1.right" timestamp="1626255614534">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state width="1878" height="373" key="GridCell.Tab.1.right/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626255614534" />
+    <state width="1750" height="327" key="GridCell.Tab.1.right/0.25.1792.1095/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626178997546" />
+    <state x="-1472" y="241" key="SettingsEditor" timestamp="1626178943132">
+      <screen x="-1920" y="126" width="1920" height="1055" />
+    </state>
+    <state x="-1472" y="219" key="SettingsEditor/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626178844833" />
+    <state x="-1472" y="241" key="SettingsEditor/0.25.1792.1095/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626178943132" />
+    <state x="-1820" y="201" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1626229447872">
+      <screen x="-1920" y="126" width="1920" height="1055" />
+    </state>
+    <state x="-1820" y="201" width="1720" height="880" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.25.1792.1008/-1920.126.1920.1055@-1920.126.1920.1055" timestamp="1626229447872" />
+    <state x="-1181" y="464" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1626178264545">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state x="-1181" y="464" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626178264545" />
+    <state x="-1254" y="390" width="1034" height="502" key="find.popup" timestamp="1626246797627">
+      <screen x="-1920" y="101" width="1920" height="1080" />
+    </state>
+    <state x="-1254" y="390" width="1034" height="502" key="find.popup/0.0.1792.1120/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626243491874" />
+    <state x="-1254" y="390" width="1034" height="502" key="find.popup/0.25.1792.1095/-1920.101.1920.1080@-1920.101.1920.1080" timestamp="1626246797627" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/me/calculator/BankFileReader.java</url>
+          <line>65</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/me/calculator/Application.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
