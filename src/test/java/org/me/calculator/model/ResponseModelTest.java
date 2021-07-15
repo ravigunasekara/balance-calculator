@@ -24,10 +24,10 @@ class ResponseModelTest {
     }
 
     @Test
-    void shouldReturnZeroTransactionsForEmptyInput() {
+    void shouldReturnZeroTransactionsForEmptyOrNullInput() {
         Map<String, BigDecimal> selectedTxn = new HashMap<>();
 
-        ResponseModel model = new ResponseModel(selectedTxn.values());
+        ResponseModel model = new ResponseModel(null);
         assertEquals(0, model.getNoOfTransactions());
         assertEquals(new BigDecimal(0), model.getAccountBalance());
     }

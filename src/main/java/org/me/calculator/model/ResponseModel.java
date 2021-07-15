@@ -4,12 +4,15 @@ import java.math.BigDecimal;
 import java.util.Collection;
 
 public class ResponseModel {
-    BigDecimal accountBalance;
-    int noOfTransactions;
+    BigDecimal accountBalance  = BigDecimal.ZERO;
+    int noOfTransactions = 0;
 
     public ResponseModel(Collection<BigDecimal> amounts) {
-        this.accountBalance = amounts.stream().reduce(BigDecimal.valueOf(0), (a, b) -> a.add(b));
-        this.noOfTransactions = amounts.size();
+        if(amounts != null) {
+            this.accountBalance = amounts.stream().reduce(BigDecimal.valueOf(0), (a, b) -> a.add(b));
+            this.noOfTransactions = amounts.size();
+        }
+
     }
 
     public BigDecimal getAccountBalance() {
