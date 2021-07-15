@@ -1,11 +1,10 @@
 package org.me.calculator;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mockito;
+import org.me.calculator.model.ResponseModel;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.FileNotFoundException;
@@ -15,11 +14,8 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.HashMap;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class BankFileReaderIntegrationTest {
@@ -27,15 +23,14 @@ public class BankFileReaderIntegrationTest {
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
     private Path resourceDirectory = Paths.get("src","test","resources");
 
-    private Map<String, BigDecimal> selectedTxn;
+    private ResponseModel responseModel;
     private BankFileReader bankFileReader;
     LocalDateTime startDateTime;
     LocalDateTime endDateTime;
 
     @BeforeEach
     void setup() {
-        selectedTxn = new HashMap<>();
-        bankFileReader = new BankFileReader(selectedTxn);
+        bankFileReader = new BankFileReader();
         startDateTime = LocalDateTime.parse("20/10/2018 12:00:55", formatter);
         endDateTime = LocalDateTime.parse("20/10/2018 20:00:55", formatter);
     }
@@ -52,28 +47,28 @@ public class BankFileReaderIntegrationTest {
     public void shouldReturnZeroRecordsWhenNoAccountIDFound() {
 
         try {
-            selectedTxn = bankFileReader.findRawBatch(startDateTime, endDateTime, resourceDirectory.toFile().getAbsolutePath()+"/testTransaction.csv", "NO-ACCOUNT");
+            responseModel = bankFileReader.findRawBatch(startDateTime, endDateTime, resourceDirectory.toFile().getAbsolutePath()+"/testTransaction.csv", "NO-ACCOUNT");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        BigDecimal total = selectedTxn.values().stream().reduce(BigDecimal.valueOf(0), (a, b) -> a.add(b));
-        assertEquals(0, selectedTxn.size());
+        BigDecimal total = responseModel.getAccountBalance();
+        assertEquals(0, responseModel.getNoOfTransactions());
         assertEquals(new BigDecimal("00"), total);
     }
 
     @Test
     public void shouldReturnValidResponseWhenRecordsFound() {
         try {
-            selectedTxn = bankFileReader.findRawBatch(startDateTime, endDateTime, resourceDirectory.toFile().getAbsolutePath()+"/testTransaction.csv", "ACC334455");
+            responseModel = bankFileReader.findRawBatch(startDateTime, endDateTime, resourceDirectory.toFile().getAbsolutePath()+"/testTransaction.csv", "ACC334455");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        BigDecimal total = selectedTxn.values().stream().reduce(BigDecimal.valueOf(0), (a, b) -> a.add(b));
-        assertEquals(1, selectedTxn.size());
+        BigDecimal total = responseModel.getAccountBalance();
+        assertEquals(1, responseModel.getNoOfTransactions());
         assertEquals(new BigDecimal("-25.00"), total);
     }
 
@@ -83,14 +78,14 @@ public class BankFileReaderIntegrationTest {
         LocalDateTime endDateTime = LocalDateTime.parse("21/10/2018 20:00:55", formatter);
 
         try {
-            selectedTxn = bankFileReader.findRawBatch(startDateTime, endDateTime, resourceDirectory.toFile().getAbsolutePath()+"/testTransaction.csv", "ACC334455");
+            responseModel = bankFileReader.findRawBatch(startDateTime, endDateTime, resourceDirectory.toFile().getAbsolutePath()+"/testTransaction.csv", "ACC334455");
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-        BigDecimal total = selectedTxn.values().stream().reduce(BigDecimal.valueOf(0), (a, b) -> a.add(b));
-        assertEquals(3, selectedTxn.size());
+        BigDecimal total = responseModel.getAccountBalance();
+        assertEquals(3, responseModel.getNoOfTransactions());
         assertEquals(new BigDecimal("-57.25"), total);
     }
 }

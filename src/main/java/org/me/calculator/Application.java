@@ -1,25 +1,21 @@
 package org.me.calculator;
 
+import org.me.calculator.model.ResponseModel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.FileNotFoundException;
-import java.io.UnsupportedEncodingException;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
+
+import static org.me.calculator.common.DateFormatter.findValidDateTime;
 
 public class Application {
     private static final Logger log = LoggerFactory.getLogger(Application.class);
     private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
     private static Scanner scanner = new Scanner(System.in).useDelimiter("\\n");;
-
-    private static LocalDateTime startDateTime;
-    private static LocalDateTime endDateTime;
 
     public static void main(String[] args) {
 
@@ -28,44 +24,42 @@ public class Application {
             System.exit(1);
         }
 
-        String input = "";
+        String input;
+        BigDecimal sum;
+        ResponseModel responseModel;
         System.out.println("accountId:");
         input = scanner.next();
 
         while (!"QUIT".equalsIgnoreCase(input)) {
             System.out.println("from:");
-            findDate(true);
+            LocalDateTime startDateTime = findDate();
             System.out.println("to:");
-            findDate(false);
+            LocalDateTime endDateTime = findDate();
 
-            Map<String, BigDecimal> selectedTxn = new HashMap<>();
-            BankFileReader bankFileReader = new BankFileReader(selectedTxn);
+            BankFileReader bankFileReader = new BankFileReader();
             try {
-                selectedTxn = bankFileReader.findRawBatch(startDateTime, endDateTime, args[0], input);
+                responseModel = bankFileReader.findRawBatch(startDateTime, endDateTime, args[0], input);
+                sum = responseModel.getAccountBalance();
+                String balance = sum.compareTo(BigDecimal.ZERO) < 0 ? "-$"+sum.abs() : "$"+sum;
+                System.out.println("\nRelative balance for the period is: " +balance);
+                System.out.println("Number of transactions included is: " + responseModel.getNoOfTransactions()+"\n");
+
             } catch (Exception e) {
                 log.error(e.getLocalizedMessage());
             }
 
-            BigDecimal sum = selectedTxn.values().stream().reduce(BigDecimal.valueOf(0), (a, b) -> a.add(b));
-            String balance = sum.compareTo(BigDecimal.ZERO) < 0 ? "-$"+sum.abs() : "$"+sum;
-            System.out.println("\nRelative balance for the period is: " +balance);
-            System.out.println("Number of transactions included is: " + selectedTxn.size()+"\n");
             System.out.println("accountId:");
             input = scanner.next();
         }
 
     }
 
-    private static void findDate(boolean isStart) {
+    private static LocalDateTime findDate() {
         String date = scanner.next();
         try {
-            if (isStart)
-                startDateTime = LocalDateTime.parse(date, formatter);
-            else
-                endDateTime = LocalDateTime.parse(date, formatter);
+            return findValidDateTime(date);
         } catch (DateTimeParseException e) {
-            System.out.println("Invalid date format. Please use dd/MM/yyyy HH:mm:ss");
-            findDate(isStart);
+            return findDate();
         }
     }
 }
