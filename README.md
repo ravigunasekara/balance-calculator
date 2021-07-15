@@ -21,4 +21,9 @@ To run the application:
   - Input file and records are all in a valid format
   - Transaction are recorded in order
 - Place transaction file at the same folder OR provide absolute file path.
-- Solution uses univocity-parsers in Batched mode. No. of records in a batch can be configured. 
+- Solution uses univocity-parsers in Batched mode. No. of records in a batch can be configured.
+- Tumbling window does not load full data set to the memory.
+- Improvements
+  - use column names instead of indexes for clarity
+  - mocking getColumnValuesAsMapOfIndexes() will allow adding more test cases with ease.
+- Spring Batch design for the same purpose. Haven't used as per assignment the instruction. 

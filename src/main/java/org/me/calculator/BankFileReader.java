@@ -102,12 +102,14 @@ public class BankFileReader {
         List<String> toAccountIds = columnValues.get(2);
         List<String> amount = columnValues.get(4);
         if (txnType.get(pointer).equals(TxnType.PAYMENT.name())) {
+
+            BigDecimal num;
             if (fromAccountIds.get(pointer).equals(accountId)) {
-                BigDecimal num = new BigDecimal(amount.get(pointer));
+                num = new BigDecimal(amount.get(pointer));
                 selectedTxn.put(txnIds.get(pointer), num.negate());
             }
             if (toAccountIds.get(pointer).equals(accountId)) {
-                BigDecimal num = new BigDecimal(amount.get(pointer));
+                num = new BigDecimal(amount.get(pointer));
                 selectedTxn.put(txnIds.get(pointer), num);
             }
         }
