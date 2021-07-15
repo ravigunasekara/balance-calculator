@@ -40,9 +40,9 @@ public class Application {
             try {
                 responseModel = bankFileReader.findRawBatch(startDateTime, endDateTime, args[0], input);
                 sum = responseModel.getAccountBalance();
-                String balance = sum.compareTo(BigDecimal.ZERO) < 0 ? "-$"+sum.abs() : "$"+sum;
-                System.out.println("\nRelative balance for the period is: " +balance);
-                System.out.println("Number of transactions included is: " + responseModel.getNoOfTransactions()+"\n");
+                String balance = sum.compareTo(BigDecimal.ZERO) < 0 ? "-$" + sum.abs() : "$" + sum;
+                System.out.println("\nRelative balance for the period is: " + balance);
+                System.out.println("Number of transactions included is: " + responseModel.getNoOfTransactions() + "\n");
 
             } catch (Exception e) {
                 log.error(e.getLocalizedMessage());

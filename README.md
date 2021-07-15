@@ -26,4 +26,4 @@ To run the application:
 - Improvements
   - use column names instead of indexes for clarity
   - mocking getColumnValuesAsMapOfIndexes() will allow adding more test cases with ease.
-- Spring Batch design for the same purpose. Haven't used as per assignment the instruction. 
+- Spring Batch design for the same purpose. Haven't used as per the assignment instruction. 
