@@ -4,8 +4,8 @@ import java.math.BigDecimal;
 import java.util.Collection;
 
 public class ResponseModel {
-    BigDecimal accountBalance  = BigDecimal.ZERO;
-    int noOfTransactions = 0;
+    private BigDecimal accountBalance  = BigDecimal.ZERO;
+    private int noOfTransactions = 0;
 
     public ResponseModel(Collection<BigDecimal> amounts) {
         if(amounts != null) {
